@@ -7,24 +7,27 @@
  . This program is a recreation of a similar program [1] 
  . which itself is the result of the back and forth between 
  . Oleg Razgulyaev (oraz) [2] and Zed (jfs) [3] in one of 
- . Oleg's answer from stackoverflow (4) about a tolower() 
- . alternative. 
+ . Oleg's answers [4] to a question from stackoverflow about 
+ . tolower() alternatives. 
  . 
  . Paraphrasing the original author [3], the purpose of this 
  . program is to "compare the relative performance of tolower() 
  . alternative functions".
  . 
- . The reason why I recreated it was to see the inner workings 
- . of it and understand it better. Also, to add an in-program 
- . time counter instead of using Valgrind. Sorry for that.
+ . The reason why I re-made the program was to see the inner 
+ . workings of it and understand it better. Also, to add an 
+ . in-program time counter instead of using Valgrind as the 
+ . original program did. Sorry for that.
  . 
- . References:
+ . -- References --
  . 
  .     [1] https://gist.github.com/zed/370497
  .     [2] https://stackoverflow.com/users/2153550/oleg-razgulyaev
  .     [3] https://stackoverflow.com/users/4279/jfs
  .         https://gist.github.com/zed
  .     [4] https://stackoverflow.com/a/2661917/2167133
+ . 
+ . -- Results --
 */
 
 /* -- Includes -- */
