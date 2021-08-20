@@ -41,9 +41,9 @@ and run the test like so:
     $ ./tolower-test 50000000
     $ ./tolower-test 100000000
 
-## Some results
+## Results
 
-I tested the program in some of the machines I have with, different compilers, and recorded the results in here. Each test was done 3 times to get a more averaged result.
+Here's a record of the tests I did with some of the machines I have and with different compilers. Every test was done 3 times to get a more averaged result.
 
 <table>
     <tr>
