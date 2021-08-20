@@ -27,7 +27,6 @@
  .         https://gist.github.com/zed
  .     [4] https://stackoverflow.com/a/2661917/2167133
  . 
- . -- Results --
 */
 
 /* -- Includes -- */
