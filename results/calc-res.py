@@ -6,7 +6,7 @@ test_len = cmd_len + funcs * func_len
 tries    = 3
 try_len  = tests * test_len
 
-with open('wsl-ub-2004.res', 'r') as res_file:
+with open('mac-mini.res', 'r') as res_file:
 
     lines = res_file.read().split('\n')
 

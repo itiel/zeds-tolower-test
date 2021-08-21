@@ -102,7 +102,8 @@ Every test was done 3 times to get a more averaged result (needles to say my lap
         <td>37.800</td>
         <td>26.304</td>
         <td>36.884</td>
-    </tr><tr>
+    </tr>
+    <tr>
         <td rowspan="4">
             Microsoft Windows 10/<br>
             Intel i5-8265U 1.60GHz/<br>
@@ -138,5 +139,42 @@ Every test was done 3 times to get a more averaged result (needles to say my lap
         <td>37.281</td>
         <td>24.203</td>
         <td>258.338</td>
+    </tr>
+    <tr>
+        <td rowspan="4">
+            macOS 11.4 - Darwin 20.5.0/<br>
+            Intel i5-4260U 1.40GHz/<br>
+            Apple clang version 12.0.5
+        </td>
+        <td><i>1,000,000</i></td>
+        <td>0.534</td>
+        <td>0.529</td>
+        <td>0.595</td>
+        <td>0.369</td>
+        <td>0.521</td>
+    </tr>
+    <tr>
+        <td><i>10,000,000</i></td>
+        <td>5.274</td>
+        <td>5.317</td>
+        <td>6.012</td>
+        <td>3.732</td>
+        <td>5.220</td>
+    </tr>
+    <tr>
+        <td><i>50,000,000</i></td>
+        <td>26.475</td>
+        <td>26.644</td>
+        <td>29.925</td>
+        <td>18.517</td>
+        <td>26.273</td>
+    </tr>
+    <tr>
+        <td><i>100,000,000</i></td>
+        <td>52.761</td>
+        <td>52.935</td>
+        <td>60.044</td>
+        <td>37.154</td>
+        <td>52.427</td>
     </tr>
 </table>
