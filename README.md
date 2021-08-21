@@ -13,7 +13,7 @@ Paraphrasing the [original author](https://gist.github.com/zed), the purpose of 
 
 The reason why I re-made the program was to see the inner workings of it and understand it better. Also, to add an in-program time counter instead of using Valgrind as the original program did. Sorry for that.
 
-Here's a copy of [the original program](/zeds-test.c).
+Here's an in-repo copy of [the original program](/zeds-test.c).
 
 ## How to test it
 
