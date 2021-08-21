@@ -108,16 +108,14 @@ void test_tolower_func (fun_t tolower_func, int tries) {
     (ch >= 'A' && ch <= 'Z' ? ch | 0x60 : ch)
 
 char * tolower_oraz (char * str) { 
-    
-    char * p;
 
-    for (p = str; *p; ++p) {
+    for (; *str; ++str) {
         
-        *p = tolower_oraz_ch(*p);
+        *str = tolower_oraz_ch(*str);
     
     }
     
-    return p;
+    return str;
 
 }
 
@@ -139,20 +137,18 @@ char * tolower_oraz (char * str) {
 
 char * tolower_oraz_2 (char * str) { 
     
-    char * p;
+    for (; *str; ++str) {
 
-    for (p = str; *p; ++p) {
-
-        // if (*p < 'A') continue;
-        // if (*p > 'Z') continue;
+        // if (*str < 'A') continue;
+        // if (*str > 'Z') continue;
         
-        // *p = *p | 0x60;
+        // *str = *str | 0x60;
 
-        *p = tolower_oraz_2_ch(*p);
+        *str = tolower_oraz_2_ch(*str);
         
     }
     
-    return p;
+    return str;
 
 }
 
@@ -213,15 +209,13 @@ int tolower_openbsd_ch (int ch) {
 
 char * tolower_openbsd (char * str) {
 
-    char *p = str;
-    
-    for ( ; *p; ++p) {
+    for (; *str; ++str) {
 
-        *p = tolower_openbsd_ch(*p);
+        *str = tolower_openbsd_ch(*str);
         
     }
 
-    return p;
+    return str;
 
 }
 
@@ -238,19 +232,16 @@ char * tolower_openbsd (char * str) {
 
 char * tolower_openbsd_2 (char * str) {
 
-    char *p = str;
-    
-    for ( ; *p; ++p) {
+    for (; *str; ++str) {
 
-        // Check for character to help performance
+        // char will never be higher than 255
+        // if (*str > 255) continue;
 
-        if (*p > 255) continue;
-
-        *p = (_tolower_openbsd_tbl + 1)[*p];
+        *str = (_tolower_openbsd_tbl + 1)[*str];
 
     }
 
-    return p;
+    return str;
 
 }
 
@@ -266,15 +257,13 @@ char * tolower_openbsd_2 (char * str) {
 
 char * tolower_ctype (char * str) {
     
-    char * p;
-    
-    for (p = str; *p; ++p) {
+    for (; *str; ++str) {
 
-        *p = tolower(*p);
+        *str = tolower(*str);
 
     } 
     
-    return p;
+    return str;
 
 }
 
