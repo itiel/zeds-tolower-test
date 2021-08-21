@@ -36,7 +36,7 @@ Or, you can compile it with your prefered compiler:
 
     $ gcc -o tolower-test tolower-test.c 
 
-and run the test like so:
+and run the test however you want:
 
     $ ./tolower-test 1000000
     $ ./tolower-test 10000000
