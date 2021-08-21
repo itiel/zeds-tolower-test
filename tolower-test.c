@@ -96,7 +96,7 @@ void test_tolower_func (fun_t tolower_func, int tries) {
  . 
  . Parameters
  . 
- .     car * str - The string to convert
+ .     char * str - The string to be converted
  . 
  . Based on the answer mentioned in the begining of the 
  . file. Uses tolower_oraz_ch() as its character version 
@@ -126,7 +126,7 @@ char * tolower_oraz (char * str) {
  . 
  . Parameters
  . 
- .     car * str - The string to convert
+ .     char * str - The string to be converted
  . 
  . Based on an upgrade to the previous solution proposed in 
  . the comments of the same answer. Uses tolower_oraz_2_ch() 
@@ -157,11 +157,11 @@ char * tolower_oraz_2 (char * str) {
 }
 
 /*
- . tolower_openbsd_ch()
+ . tolower_openbsd()
  . 
  . Parameters
  . 
- .     car * str - The string to convert
+ .     char * str - The string to be converted
  . 
  . Emulates the logic of openbsd's tolower(). Uses a look-up 
  . table of characters instead of calculating lower ver
@@ -217,7 +217,30 @@ char * tolower_openbsd (char * str) {
     
     for ( ; *p; ++p) {
 
-        // *p = tolower_openbsd_ch(*p);
+        *p = tolower_openbsd_ch(*p);
+        
+    }
+
+    return p;
+
+}
+
+/*
+ . tolower_openbsd_2()
+ . 
+ . Parameters
+ . 
+ .     char * str - The string to be converted
+ . 
+ . Same as last one. Just this time it does the conversion 
+ . inside the loop instead of invoking another function.
+*/
+
+char * tolower_openbsd_2 (char * str) {
+
+    char *p = str;
+    
+    for ( ; *p; ++p) {
 
         // Check for character to help performance
 
@@ -236,7 +259,7 @@ char * tolower_openbsd (char * str) {
  . 
  . Parameters
  . 
- .     car * str - The string to convert
+ .     char * str - The string to be converted
  . 
  . Uses ctype's tolower() for its core functionality.
 */
@@ -267,7 +290,8 @@ int main (int argc, char const ** argv) {
     fun_t funcs [] = { 
         tolower_oraz, 
         tolower_oraz_2, 
-        tolower_openbsd, 
+        tolower_openbsd,
+        tolower_openbsd_2, 
         tolower_ctype 
     };
 
